@@ -1,0 +1,17 @@
+[Unit]
+Description=MTG Commander Discord Bot
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/mtg-bot
+ExecStart=/usr/bin/python3 /home/pi/mtg-bot/bot.py
+Restart=always
+RestartSec=10
+
+# Environment
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
