@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mtg-commander-bot
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: COMMAND_PREFIX
+        value: "!mtg"
+      - key: PYTHON_VERSION
+        value: "3.11.0"

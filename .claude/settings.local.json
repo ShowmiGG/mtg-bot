@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python bot.py:*)",
+      "Bash(timeout 10 python:*)",
+      "Bash(echo:*)",
+      "Bash(python -u:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
